@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Components loaded normally
@@ -11,15 +11,10 @@ import WAButton from "./components/WAButton";
 import Footer from "./components/Footer";
 import NotFound from "./components/NotFound";
 import ScrollReveal from "./components/ScrollReveal";
-
-// Skeleton fallbacks for lazy loaded components
-import { CardSkeleton, FAQSeqSkeleton, FormSkeleton } from "./components/Skeleton";
-
-// Lazy loaded components (for faster initial render)
-const Testimonials = lazy(() => import("./components/Testimonials"));
-const Pricing = lazy(() => import("./components/Pricing"));
-const FAQ = lazy(() => import("./components/FAQ"));
-const BookingForm = lazy(() => import("./components/BookingForm"));
+import Testimonials from "./components/Testimonials";
+import Pricing from "./components/Pricing";
+import FAQ from "./components/FAQ";
+import BookingForm from "./components/BookingForm";
 
 // Homepage layout wrapper
 const Home = () => {
@@ -47,33 +42,25 @@ const Home = () => {
           <HowToBook />
         </ScrollReveal>
 
-        {/* Testimonials (Lazy Loaded) */}
-        <Suspense fallback={<CardSkeleton count={3} />}>
-          <ScrollReveal>
-            <Testimonials />
-          </ScrollReveal>
-        </Suspense>
+        {/* Testimonials */}
+        <ScrollReveal>
+          <Testimonials />
+        </ScrollReveal>
 
-        {/* Pricing (Lazy Loaded) */}
-        <Suspense fallback={<CardSkeleton count={3} />}>
-          <ScrollReveal>
-            <Pricing />
-          </ScrollReveal>
-        </Suspense>
+        {/* Pricing */}
+        <ScrollReveal>
+          <Pricing />
+        </ScrollReveal>
 
-        {/* FAQ (Lazy Loaded) */}
-        <Suspense fallback={<FAQSeqSkeleton />}>
-          <ScrollReveal>
-            <FAQ />
-          </ScrollReveal>
-        </Suspense>
+        {/* FAQ */}
+        <ScrollReveal>
+          <FAQ />
+        </ScrollReveal>
 
-        {/* Booking Form (Lazy Loaded) */}
-        <Suspense fallback={<FormSkeleton />}>
-          <ScrollReveal>
-            <BookingForm />
-          </ScrollReveal>
-        </Suspense>
+        {/* Booking Form */}
+        <ScrollReveal>
+          <BookingForm />
+        </ScrollReveal>
       </main>
 
       {/* Footer */}
