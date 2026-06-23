@@ -46,7 +46,7 @@ const Navbar = () => {
           href="/"
           className="flex items-center gap-2 font-display font-bold text-xl tracking-tight text-white transition-colors duration-200 hover:text-amber-400"
         >
-          <img src="/logo.png" alt="AutoPro Logo" className="w-8 h-8 object-contain rounded-md border border-navy-600 bg-navy-950" />
+          <img src="/logo.webp" alt="AutoPro Logo" className="w-8 h-8 object-contain rounded-md border border-navy-600 bg-navy-950" />
           <span>{generalInfo.brandName.toUpperCase()}</span>
         </a>
 
