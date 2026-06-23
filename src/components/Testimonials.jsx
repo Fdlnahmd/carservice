@@ -1,5 +1,5 @@
 import React from "react";
-import { Star } from "lucide-react";
+import Star from "lucide-react/dist/esm/icons/star.mjs";
 import { testimonials } from "../data/content";
 
 const Testimonials = () => {
@@ -49,9 +49,9 @@ const Testimonials = () => {
 
               {/* Author */}
               <div className="mt-6 pt-4 border-t border-gray-100 relative z-10">
-                <h4 className="font-body font-semibold text-[15px] text-gray-900">
+                <h3 className="font-body font-semibold text-[15px] text-gray-900">
                   {t.name}
-                </h4>
+                </h3>
                 <p className="font-body font-normal text-[13px] text-gray-600 mt-0.5">
                   {t.vehicle}
                 </p>

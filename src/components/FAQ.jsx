@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import ChevronDown from "lucide-react/dist/esm/icons/chevron-down.mjs";
 import { faqs } from "../data/content";
 
 const FAQ = () => {
@@ -39,6 +39,7 @@ const FAQ = () => {
                 <button
                   onClick={() => toggleAccordion(index)}
                   className="w-full flex items-center justify-between text-left py-5 focus:outline-none group"
+                  aria-expanded={isOpen}
                 >
                   <span className="font-body font-medium text-[16px] text-gray-900 group-hover:text-navy-950 transition-colors duration-150">
                     {faq.question}

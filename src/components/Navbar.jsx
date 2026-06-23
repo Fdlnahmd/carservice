@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Menu, X, PhoneCall } from "lucide-react";
+import Menu from "lucide-react/dist/esm/icons/menu.mjs";
+import X from "lucide-react/dist/esm/icons/x.mjs";
+import PhoneCall from "lucide-react/dist/esm/icons/phone-call.mjs";
 import { navLinks, generalInfo } from "../data/content";
 
 const Navbar = () => {
@@ -99,6 +101,7 @@ const Navbar = () => {
           <button
             onClick={() => setIsMobileOpen(false)}
             className="text-navy-100 hover:text-white transition-colors"
+            aria-label="Tutup menu"
           >
             <X className="w-6 h-6" />
           </button>

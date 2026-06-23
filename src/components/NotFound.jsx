@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ShieldAlert, ArrowLeft } from "lucide-react";
+import ShieldAlert from "lucide-react/dist/esm/icons/shield-alert.mjs";
+import ArrowLeft from "lucide-react/dist/esm/icons/arrow-left.mjs";
 
 const NotFound = () => {
   return (

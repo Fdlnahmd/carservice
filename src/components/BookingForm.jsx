@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Send, Calendar } from "lucide-react";
+import Send from "lucide-react/dist/esm/icons/send.mjs";
+import Calendar from "lucide-react/dist/esm/icons/calendar.mjs";
 import { services, generalInfo } from "../data/content";
 
 const BookingForm = () => {
@@ -95,10 +96,11 @@ Mohon konfirmasi ketersediaan slotnya. Terima kasih.`;
               
               {/* Nama */}
               <div className="flex flex-col">
-                <label className="font-body font-medium text-[13px] text-navy-100 mb-1.5">
+                <label htmlFor="name" className="font-body font-medium text-[13px] text-navy-100 mb-1.5">
                   Nama Lengkap *
                 </label>
                 <input
+                  id="name"
                   type="text"
                   name="name"
                   value={formData.name}
@@ -111,10 +113,11 @@ Mohon konfirmasi ketersediaan slotnya. Terima kasih.`;
 
               {/* No HP */}
               <div className="flex flex-col">
-                <label className="font-body font-medium text-[13px] text-navy-100 mb-1.5">
+                <label htmlFor="phone" className="font-body font-medium text-[13px] text-navy-100 mb-1.5">
                   Nomor HP (WhatsApp) *
                 </label>
                 <input
+                  id="phone"
                   type="tel"
                   name="phone"
                   value={formData.phone}
@@ -127,10 +130,11 @@ Mohon konfirmasi ketersediaan slotnya. Terima kasih.`;
 
               {/* Jenis Mobil */}
               <div className="flex flex-col">
-                <label className="font-body font-medium text-[13px] text-navy-100 mb-1.5">
+                <label htmlFor="carType" className="font-body font-medium text-[13px] text-navy-100 mb-1.5">
                   Jenis/Merek Mobil *
                 </label>
                 <input
+                  id="carType"
                   type="text"
                   name="carType"
                   value={formData.carType}
@@ -143,11 +147,12 @@ Mohon konfirmasi ketersediaan slotnya. Terima kasih.`;
 
               {/* Layanan */}
               <div className="flex flex-col">
-                <label className="font-body font-medium text-[13px] text-navy-100 mb-1.5">
+                <label htmlFor="serviceType" className="font-body font-medium text-[13px] text-navy-100 mb-1.5">
                   Jenis Layanan *
                 </label>
                 <div className="relative">
                   <select
+                    id="serviceType"
                     name="serviceType"
                     value={formData.serviceType}
                     onChange={handleChange}
@@ -175,10 +180,11 @@ Mohon konfirmasi ketersediaan slotnya. Terima kasih.`;
 
               {/* Tanggal Servis */}
               <div className="flex flex-col md:col-span-2">
-                <label className="font-body font-medium text-[13px] text-navy-100 mb-1.5">
+                <label htmlFor="date" className="font-body font-medium text-[13px] text-navy-100 mb-1.5">
                   Pilih Tanggal Servis *
                 </label>
                 <input
+                  id="date"
                   type="date"
                   name="date"
                   value={formData.date}
@@ -190,10 +196,11 @@ Mohon konfirmasi ketersediaan slotnya. Terima kasih.`;
 
               {/* Catatan */}
               <div className="flex flex-col md:col-span-2">
-                <label className="font-body font-medium text-[13px] text-navy-100 mb-1.5">
+                <label htmlFor="notes" className="font-body font-medium text-[13px] text-navy-100 mb-1.5">
                   Catatan Keluhan / Kebutuhan Tambahan
                 </label>
                 <textarea
+                  id="notes"
                   name="notes"
                   value={formData.notes}
                   onChange={handleChange}

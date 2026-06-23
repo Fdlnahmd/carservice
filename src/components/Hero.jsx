@@ -1,5 +1,6 @@
 import React from "react";
-import { MessageSquare, Calendar } from "lucide-react";
+import MessageSquare from "lucide-react/dist/esm/icons/message-square.mjs";
+import Calendar from "lucide-react/dist/esm/icons/calendar.mjs";
 import { stats, generalInfo } from "../data/content";
 
 const Hero = () => {
@@ -21,7 +22,7 @@ const Hero = () => {
       {/* Background Image of modern workshop */}
       <div 
         className="absolute inset-0 bg-cover bg-center z-0 opacity-65" 
-        style={{ backgroundImage: "url('/hero-bg.png')" }}
+        style={{ backgroundImage: "url('/hero-bg.webp')" }}
       />
       {/* Softer Gradient overlay for high readability and image visibility */}
       <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(10,15,30,0.55),rgba(10,15,30,0.35),rgba(10,15,30,0.85))] z-0" />

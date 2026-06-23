@@ -1,5 +1,9 @@
 import React from "react";
-import { MapPin, Phone, Mail, Clock, Shield } from "lucide-react";
+import MapPin from "lucide-react/dist/esm/icons/map-pin.mjs";
+import Phone from "lucide-react/dist/esm/icons/phone.mjs";
+import Mail from "lucide-react/dist/esm/icons/mail.mjs";
+import Clock from "lucide-react/dist/esm/icons/clock.mjs";
+import Shield from "lucide-react/dist/esm/icons/shield.mjs";
 import { generalInfo, navLinks } from "../data/content";
 
 const Footer = () => {
@@ -20,7 +24,7 @@ const Footer = () => {
           <h3 className="font-display font-bold text-xl uppercase tracking-wider text-amber-500">
             {generalInfo.brandName}
           </h3>
-          <p className="font-body text-xs md:text-sm text-navy-100/70 leading-relaxed">
+          <p className="font-body text-xs md:text-sm text-navy-100/85 leading-relaxed">
             Penyedia layanan perawatan dan perbaikan mobil profesional dengan teknisi ahli bersertifikat resmi. Kami menjamin kepuasan berkendara Anda dengan garansi 30 hari.
           </p>
           <div className="flex items-center gap-2 pt-2 text-amber-500/80 font-body text-xs">
@@ -40,7 +44,7 @@ const Footer = () => {
                 <a
                   href={link.href}
                   onClick={(e) => handleScrollToTop(e, link.href)}
-                  className="font-body text-xs md:text-sm text-navy-100/70 hover:text-white transition-colors duration-150"
+                  className="font-body text-xs md:text-sm text-navy-100/85 hover:text-white transition-colors duration-150"
                 >
                   {link.label}
                 </a>
@@ -54,7 +58,7 @@ const Footer = () => {
           <h4 className="font-display font-semibold text-md uppercase tracking-wider text-white">
             Info Kontak Kami
           </h4>
-          <ul className="space-y-3 font-body text-xs md:text-sm text-navy-100/70">
+          <ul className="space-y-3 font-body text-xs md:text-sm text-navy-100/85">
             <li className="flex items-start gap-2">
               <MapPin className="w-4 h-4 text-amber-500 mt-0.5 shrink-0" />
               <span>{generalInfo.address}</span>
@@ -75,7 +79,7 @@ const Footer = () => {
           <h4 className="font-display font-semibold text-md uppercase tracking-wider text-white">
             Jam Operasional
           </h4>
-          <div className="flex items-start gap-2 text-navy-100/70 font-body text-xs md:text-sm">
+          <div className="flex items-start gap-2 text-navy-100/85 font-body text-xs md:text-sm">
             <Clock className="w-4 h-4 text-amber-500 mt-0.5 shrink-0" />
             <span>{generalInfo.hours}</span>
           </div>
@@ -118,7 +122,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Footer */}
-      <div className="max-w-6xl mx-auto px-6 mt-12 pt-6 border-t border-navy-800/80 text-center font-body text-[11px] text-navy-100/40">
+      <div className="max-w-6xl mx-auto px-6 mt-12 pt-6 border-t border-navy-800/80 text-center font-body text-[11px] text-navy-100/65">
         <p>© {new Date().getFullYear()} {generalInfo.brandName}. All rights reserved.</p>
         <p className="mt-1">Didesain dengan presisi untuk kenyamanan berkendara Anda.</p>
       </div>

@@ -1,6 +1,15 @@
-import React from "react";
-import * as Icons from "lucide-react";
+import Award from "lucide-react/dist/esm/icons/award.mjs";
+import CheckCircle from "lucide-react/dist/esm/icons/check-circle.mjs";
+import ShieldCheck from "lucide-react/dist/esm/icons/shield-check.mjs";
+import TrendingUp from "lucide-react/dist/esm/icons/trending-up.mjs";
 import { advantages } from "../data/content";
+
+const iconMap = {
+  Award,
+  CheckCircle,
+  ShieldCheck,
+  TrendingUp,
+};
 
 const WhyUs = () => {
   return (
@@ -21,7 +30,7 @@ const WhyUs = () => {
         {/* Advantages Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {advantages.map((item, index) => {
-            const IconComponent = Icons[item.icon] || Icons.Award;
+            const IconComponent = iconMap[item.icon] || Award;
 
             return (
               <div

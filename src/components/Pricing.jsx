@@ -1,5 +1,5 @@
 import React from "react";
-import { Check } from "lucide-react";
+import Check from "lucide-react/dist/esm/icons/check.mjs";
 import { pricingPackages } from "../data/content";
 
 const Pricing = () => {

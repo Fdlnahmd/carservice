@@ -1,6 +1,19 @@
-import React from "react";
-import * as Icons from "lucide-react";
+import Wrench from "lucide-react/dist/esm/icons/wrench.mjs";
+import Droplet from "lucide-react/dist/esm/icons/droplet.mjs";
+import Calendar from "lucide-react/dist/esm/icons/calendar.mjs";
+import Wind from "lucide-react/dist/esm/icons/wind.mjs";
+import ShieldAlert from "lucide-react/dist/esm/icons/shield-alert.mjs";
+import Sparkles from "lucide-react/dist/esm/icons/sparkles.mjs";
 import { services } from "../data/content";
+
+const iconMap = {
+  Wrench,
+  Droplet,
+  Calendar,
+  Wind,
+  ShieldAlert,
+  Sparkles,
+};
 
 const Services = () => {
   return (
@@ -22,7 +35,7 @@ const Services = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service) => {
             // Dinamis me-load Lucide Icon berdasarkan string name
-            const IconComponent = Icons[service.icon] || Icons.Wrench;
+            const IconComponent = iconMap[service.icon] || Wrench;
 
             return (
               <div
